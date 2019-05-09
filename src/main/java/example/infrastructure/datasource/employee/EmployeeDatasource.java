@@ -10,7 +10,11 @@ public class EmployeeDatasource implements EmployeeRepository {
 
     @Override
     public Employee choose(EmployeeNumber employeeNumber) {
-        return mapper.selectByEmployeeNumber(employeeNumber);
+        Employee employee = mapper.selectByEmployeeNumber(employeeNumber);
+        if (employee == null) {
+            throw new EmployeeNotFoundException(employeeNumber);
+        }
+        return employee;
     }
 
     @Override

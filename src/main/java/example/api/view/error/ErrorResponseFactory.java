@@ -1,4 +1,4 @@
-package example.presentation.view.error;
+package example.api.view.error;
 
 public interface ErrorResponseFactory {
 

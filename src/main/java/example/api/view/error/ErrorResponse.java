@@ -1,4 +1,4 @@
-package example.presentation.view.error;
+package example.api.view.error;
 
 import org.springframework.http.ResponseEntity;
 
@@ -15,7 +15,6 @@ public class ErrorResponse {
     String message;
 
     public ResponseEntity<ErrorResponse> toEntity() {
-        return ResponseEntity.status(type.httpStatus)
-                .body(this);
+        return ResponseEntity.status(type.httpStatus).body(this);
     }
 }

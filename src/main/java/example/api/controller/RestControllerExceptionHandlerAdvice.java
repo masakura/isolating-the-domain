@@ -1,9 +1,9 @@
-package example.presentation.restcontroller;
+package example.api.controller;
 
+import example.api.view.error.ErrorResponse;
+import example.api.view.error.ErrorType;
 import example.infrastructure.datasource.employee.EmployeeNotFoundException;
 import example.presentation.controller.BaseControllerAdvice;
-import example.presentation.view.error.ErrorResponse;
-import example.presentation.view.error.ErrorType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataAccessException;

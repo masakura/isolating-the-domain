@@ -1,4 +1,4 @@
-package example.presentation.restcontroller;
+package example.api.controller;
 
 import example.application.service.employee.EmployeeQueryService;
 import example.infrastructure.datasource.employee.EmployeeDatasource;

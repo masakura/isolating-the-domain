@@ -1,0 +1,22 @@
+@startuml
+
+Payroll -- Contract
+Contract -- Employee
+Contract -- ContractWages
+ContractWages "1" *-- "*" ContractWage
+ContractWage *-- ContractStartingDate
+ContractWage *-- WageCondition
+note left of ContractWage {
+    時給や時間外手当など
+}
+
+Payroll -- Attendance
+Attendance -- WorkMonth
+Attendance -- TimeRecords
+TimeRecords "1" *-- "*" TimeRecord
+TimeRecord *-- WorkDate
+TimeRecord *-- ActualWorkTime
+ActualWorkTime *-- TimeRange
+ActualWorkTime *-- DaytimeBreakTime
+ActualWorkTime *-- MidnightBreakTime
+@enduml
